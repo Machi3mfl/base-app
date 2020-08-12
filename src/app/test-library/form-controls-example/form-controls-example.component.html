@@ -1,0 +1,104 @@
+<div class="container-fluid"> 
+
+    <div class="col-6 m-auto">
+        <div class="row">
+            <h2>Form Controls Example</h2>
+        </div>
+        <!------------ Input -------------->
+        <ngx-core-form-control 
+            [iCoreFormControl]="inputControl"
+            (valueChanges)="controlValueChange($event)"
+            (focusout)="blurInput($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ inputControl.getValue() }}</span>
+        </div>
+        
+        <!------------ Button Toggle -------------->
+        <ngx-core-form-control 
+            [iCoreFormControl]="btnToggle"
+            (valueChanges)="controlValueChange($event)"
+            (focusout)="blurInput($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ btnToggle.getValue() }}</span>
+        </div>
+        <!------------ Autocomplete -------------->
+        <ngx-core-form-control 
+            [iCoreFormControl]="inputAutocomplete"
+            (valueChanges)="autocompleteChange($event)"
+            [isLoading]="autocompleteLoading"
+            (focusout)="blurInput($event)">
+            (itemSelectedEvent)="itemSelected($event)"
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ inputAutocomplete.getValue() }}</span>
+        </div>
+        
+        <!------------ Datepicker -------------->
+        <ngx-core-form-control 
+            [iCoreFormControl]="datePickerControl"
+            (valueChanges)="autocompleteChange($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ datePickerControl.getValue() | date: 'dd/MM/yyyy' }}</span>
+        </div>
+        <!------------ Range MonthYear -------------->
+        <ngx-core-form-control 
+            [iCoreFormControl]="rangeInput"
+            (valueChanges)="controlValueChange($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ rangeInput.getValue() | json }}</span>
+        </div>
+        <!------------ Range Date -------------->
+        <ngx-core-form-control 
+            [iCoreFormControl]="rangeDateInput"
+            (valueChanges)="controlValueChange($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ rangeDateInput.getValue() | json }}</span>
+        </div>
+        <!------------ SLIDE TOGLLE -------------->
+        <ngx-core-form-control 
+            [iCoreFormControl]="slideInput"
+            (valueChanges)="controlValueChange($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ slideInput.getValue() }}</span>
+        </div>
+        <!------------ TILE SELECT -------------->
+         <ngx-core-form-control 
+         [iCoreFormControl]="tileInput"
+         (valueChanges)="controlValueChange($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ tileInput.getValue() }}</span>
+        </div>
+        <!------------ PERIOD PICKER -------------->
+        <ngx-core-form-control 
+            [iCoreFormControl]="periodInput"
+            (valueChanges)="controlValueChange($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ periodInput.getValue() }}</span>
+        </div>
+        <!------------ PERIOD PICKER -------------->
+        <ngx-core-form-control 
+         [iCoreFormControl]="checklistInput"
+         (valueChanges)="controlValueChange($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ checklistInput.getValue() }}</span>
+        </div>
+         <!------------ SELECT -------------->
+         <ngx-core-form-control 
+         [iCoreFormControl]="selectInput"
+         (valueChanges)="controlValueChange($event)">
+        </ngx-core-form-control>
+        <div class="p mb-4">
+            <strong>Value:</strong><span>{{ selectInput.getValue() }}</span>
+        </div>
+        
+    </div>
+</div>
