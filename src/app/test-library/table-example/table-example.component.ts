@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ControlOptions, CoreFormControl, SimpleHttpClientService, CoreTableControl, TableColumns } from 'ngx-core-library';
+import { ControlOptions, CoreFormControl, SimpleHttpClientService, CoreTableControl } from 'ngx-core-library';
+import { TableColumns } from 'ngx-core-library';
 import { identifierModuleUrl } from '@angular/compiler';
 
 @Component({

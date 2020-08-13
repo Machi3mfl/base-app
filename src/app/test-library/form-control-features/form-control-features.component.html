@@ -1,0 +1,60 @@
+<div class="container-fluid"> 
+    
+    <div class="col-8 m-auto">
+        <div class="row">
+            <h1>Form Controls Features</h1>
+        </div>
+        <!------------ Input -------------->
+        <div class="row">
+            <ngx-core-form-control 
+                class="w-100"
+                [iCoreFormControl]="inputAutocomplete"
+                (valueChanges)="autocompleteChange($event)"
+                [isLoading]="autocompleteLoading"
+                (focusout)="blurInput($event)">
+                (itemSelectedEvent)="itemSelected($event)">
+            </ngx-core-form-control>
+            <!--div class="p mb-4">
+                <strong>Value:</strong><span>{{ inputAutocomplete.getValue() }}</span>
+            </div-->
+        </div>
+        <div class="row mt-4">
+            <h2>Features</h2>
+            <section class="col-12">
+                <mat-form-field appearance="outline">
+                    <mat-label>Change Label</mat-label>
+                    <input 
+
+                        #inputLabel 
+                        matInput 
+                        placeholder="Label Input" 
+                        [(ngModel)]="inputAutocomplete.label">
+                </mat-form-field>
+            </section>
+            <section class="col-12">
+                <mat-checkbox [(ngModel)]="disabled" (click)="toggleEnabled()">Disabled</mat-checkbox>
+            </section>
+            <section class="col-12">
+                <mat-checkbox [(ngModel)]="required" (click)="toggleRequired()">Required</mat-checkbox>
+            </section>
+            <section class="col-12">
+                <mat-checkbox [(ngModel)]="hidden" (click)="toggleHidden()">Hidden</mat-checkbox>
+            </section>
+            <!--button mat-button (click)="toggleEnabled()">Disabled/Enabled</button-->
+            <section class="col-6">
+                <h2>Valor:</h2>
+                <pre>
+                    {{ inputAutocomplete.getValue() | json }}
+                </pre>
+            </section>
+            <section class="col-6">
+                <h2>Items:</h2>
+                <pre>
+                    {{ inputAutocomplete.getItems() | json }}
+                </pre>
+            </section>
+            
+        </div>
+    </div>
+</div>
+

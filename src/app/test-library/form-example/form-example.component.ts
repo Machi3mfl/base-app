@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectorRef, AfterViewChecked } from '@angular/core';
+import { Component, OnInit, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
 import { FormOptions, CoreForm } from 'ngx-core-library';
 import { Validators } from '@angular/forms';
 
@@ -35,7 +35,7 @@ export class FormExampleComponent implements OnInit, AfterViewChecked {
           pasteFieldOnSelect: 'nombre',
           defaultValue: '',
         },
-        class: 'col-sm-12 col-md-12 col-lg-5'
+        class: 'col-sm-12 col-md-12 col-lg-4'
       },
       p_x_asegurado: {
         label: 'Asegurado',
@@ -53,7 +53,7 @@ export class FormExampleComponent implements OnInit, AfterViewChecked {
           pasteFieldOnSelect: 'cod_asegurado',
           defaultValue: '',
         },
-        class: 'col-sm-12 col-md-12 col-lg-3'
+        class: 'col-sm-12 col-md-12 col-lg-4'
       },
       p_fec_siniestro: {
         label: 'Fecha',
@@ -101,7 +101,7 @@ export class FormExampleComponent implements OnInit, AfterViewChecked {
         validators: [
           Validators.minLength(10)
         ],
-        class: 'col-sm-12 col-md-12 col-lg-2'
+        class: 'col-sm-12 col-md-12 col-lg-4'
       },
       p_cod_poliza: {
         label: 'Póliza',
@@ -114,7 +114,7 @@ export class FormExampleComponent implements OnInit, AfterViewChecked {
         validators: [
           Validators.minLength(10)
         ],
-        class: 'col-sm-12 col-md-12 col-lg-2'
+        class: 'col-sm-12 col-md-12 col-lg-4'
       },
       /*
       p_estado: {
@@ -164,7 +164,7 @@ export class FormExampleComponent implements OnInit, AfterViewChecked {
         validators: [
           Validators.minLength(7)
         ],
-        class: 'col-sm-12 col-md-12 col-lg-2'
+        class: 'col-sm-12 col-md-12 col-lg-4'
       }    
       
     }

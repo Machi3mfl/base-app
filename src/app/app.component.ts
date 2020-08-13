@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'base-app';
+  title = 'home';
+
+  
+  public onToggleSidenav = () => {
+    //this.sidenavToggle.emit();
+  }
+
+  public onSidenavClose = () => {
+    // this.sidenavClose.emit();
+  }
 }

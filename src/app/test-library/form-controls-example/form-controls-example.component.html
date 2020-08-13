@@ -29,7 +29,7 @@
             (valueChanges)="autocompleteChange($event)"
             [isLoading]="autocompleteLoading"
             (focusout)="blurInput($event)">
-            (itemSelectedEvent)="itemSelected($event)"
+            (itemSelectedEvent)="itemSelected($event)">
         </ngx-core-form-control>
         <div class="p mb-4">
             <strong>Value:</strong><span>{{ inputAutocomplete.getValue() }}</span>

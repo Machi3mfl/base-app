@@ -1,15 +1,17 @@
 
 <div class="container-fluid">
-    <ngx-core-form 
-    [title]="title"
-    [form]="form"></ngx-core-form>
-    <div class="row">
-        <pre>
-            {{ form.getValue() | json }}
-        </pre>  
-        <pre>
-            Válido: {{ form.getFormGroup().valid }}
-        </pre>  
+    <div class="col-8 m-auto">
+        <ngx-core-form 
+        [title]="title"
+        [form]="form"></ngx-core-form>
+        <div class="row">
+            <pre>
+                {{ form.getValue() | json }}
+            </pre>  
+            <pre>
+                Válido: {{ form.getFormGroup().valid }}
+            </pre>  
+        </div>
     </div>
 </div>
 

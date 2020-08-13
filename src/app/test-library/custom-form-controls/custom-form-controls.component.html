@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <h2>Controles que consultan API</h2>
+    <div class="row">
+        <div class="col-6">
+            <ngx-cm-autocomplete [iFormControl]="formGroup.get('asegurado')" [controlOptions]="controlsOptions['asegurado']"></ngx-cm-autocomplete>
+            <pre>
+                {{ formGroup.get('asegurado').value | json  }}
+            </pre>
+        </div>
+        <div class="col-6">
+            <ngx-cm-select [iFormControl]="formGroup.get('seccion')" [controlOptions]="controlsOptions['seccion']"></ngx-cm-select>
+            <pre>
+                {{ formGroup.get('seccion').value }}
+            </pre>
+        </div>
+    </div>
+</div>
